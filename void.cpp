@@ -41,19 +41,17 @@ for(int i=0;i<elemento;i++)
 }
 printf("%f",d);
 }
-char invertida(char *s)
+void inversa(char *p,int numero,int inicio)
 {
-char *p;
-p=s;
-if (*(s+1)=='\0')
-{
-  printf("%c",*s);
-  return '0';
-}
-s++;
-invertida(s);
-printf("%c",*p);
-return '0';
+    char q;
+    if(inicio>=numero)
+    {
+        return ;
+    }
+    q=*(p+inicio);
+    *(p+inicio)=*(p+numero);
+    *(p+numero)=q;
+    inversa(p,numero-1,inicio+1);
 }
 int alejado(char *s,char b)
 {
