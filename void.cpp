@@ -1,10 +1,13 @@
 #include<stdio.h>
 
 using namespace std;
-char mayuscula(char a)
+void mayuscula()
 {
+char a;
+scanf("%c",a);
 a+=32;
-return a;
+printf("%c",a);
+mayuscula();
 }
 float recibir(char *s)
 {
@@ -19,22 +22,22 @@ s++;
 float b,c=10,suma=0;
 while(*s!='e')
 {
-b=(*s-'0');
-suma+=(b/c);
-c*=10;
-s++;
+  b=(*s-'0');
+  suma+=(b/c);
+  c*=10;
+  s++;
 }
 s+=2;
 d+=suma;
 int elemento=0;
 while(*s!='\0')
 {
-elemento=(elemento*10)+(*s-'0');
-s++;
+  elemento=(elemento*10)+(*s-'0');
+  s++;
 }
 for(int i=0;i<elemento;i++)
 {
-d/=10;
+  d/=10;
 }
 printf("%f",d);
 }
@@ -44,8 +47,8 @@ char *p;
 p=s;
 if (*(s+1)=='\0')
 {
-printf("%c",*s);
-return '0';
+  printf("%c",*s);
+  return '0';
 }
 s++;
 invertida(s);
@@ -70,4 +73,7 @@ return posicion;
 main()
 {
 recibir("10202.123e-2");
+invertida("Hola");
+alejado("Cienciadelacomputacion",'o');
+funcion();
 }
