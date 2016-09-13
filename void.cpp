@@ -4,7 +4,7 @@ using namespace std;
 void mayuscula()
 {
 char a;
-scanf("%c",a);
+scanf("%c",&a);
 a+=32;
 printf("%c",a);
 mayuscula();
